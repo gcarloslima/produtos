@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/listagemProdutos.css" th:href="@{/css/listagemProdutos.css}">
+    <script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+    <title>Vitrine</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <a href="cadastrarProduto">Home</a>
+            <form th:action="@{parametroProduto}" class="formPesquisa">
+                <input type="text" th:name="nomeProduto" placeholder="Insira o nome">
+                <input type="submit" value="">
+            </form>
+
+        </header>
+        <main>
+            <section class="produtos" th:each="produto : ${produtos}">
+                <div>
+                    <div class="caixaImagem"><img th:src="${produto.enderecoImagem}" alt=""></div>
+                    <div class="caixaTexto">
+                        <h1 th:text="${produto.nomeProduto}"></h1>
+                        <p th:text="${produto.descricaoProduto}"></p>
+                        <p class="preco" th:text="'R$ ' + ${produto.precoProduto}"></p>
+                        <a target="_blank" th:href="${produto.linkProduto}"><input type="button" value="Comprar"></a>
+                        <a th:href="@{'/editarProduto?idProduto=' + ${produto.idProduto} + '#formCadastro'}"><input type="button" value="Editar"></a>
+                        <a th:href="@{'/removerProduto?idProduto=' + ${produto.idProduto}}"><input type="button" value="Excluir"></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

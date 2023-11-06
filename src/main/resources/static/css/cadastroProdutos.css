@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url(../img/paredecolorida.jpg);
+    overflow: auto;
+    background-size: cover;
+    background-position: center; 
+    
+}
+
+
+body > div {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul {
+    display: flex;
+    gap: 10em;
+}
+header li {
+    list-style: none;
+    display: inline-block;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.boasVindas {
+    height: 90vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boasVindas > div {
+    text-align: center;
+    margin-top: -10vh;
+}
+
+.boasVindas h1 {
+    font-size: 100px;
+}
+
+
+
+
+
+.boasVindas input {
+    margin-top: 35px;
+    padding: 20px 60px;
+    border-radius: 0;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: rgb(0, 187, 255);
+    outline-width: 0;
+    color: white;
+    font-weight: 500;
+    box-shadow: 10px 10px 0px black;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+.boasVindas input:hover { 
+    box-shadow: 0px 0px 0px black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    font-weight: 500;
+}
+
+
+form input, form textarea {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline-width: 0;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    background-color: #233340;
+    color: white;
+    resize: none;
+}
+
+
+form input[type="submit"] {
+    background-color: #6BD300;
+    color: white;
+    font-size: 20px;
+    padding: 5px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cadastro {
+    margin-bottom: 100px;
+}
+
+.cadastro > div > div {
+    width: 50%;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.cadastro > div {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    width: 1200px;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px 10px rgb(0, 0, 0);
+    
+}
+
+.form {
+    
+    background-color: #121215;
+    color: white;
+}
+
+.imgForm {
+    overflow: hidden;
+}
+
+.imgForm img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    
+}
+
+.imgFormLista {
+    width: 240px;
+    height: 310px;
+}
+
+

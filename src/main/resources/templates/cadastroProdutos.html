@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/cadastroProdutos.css" th:href="@{/css/cadastroProdutos.css}">
+    <script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+    <title>Vitrine</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="cadastrarProduto">Home</a></li>
+                    <li><a href="listaProdutos">Listagem</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="boasVindas">
+                <div>
+                    <h1>Boas Vindas</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perferendis reiciendis, culpa quo
+                        commodi reprehenderit non ut.</p>
+                    <a href="#formCadastro"><input type="button" value="Cadastro"></a>
+                </div>
+            </section>
+            <section class="cadastro" id="formCadastro">
+                <div>
+                    <div class="form">
+                        <form method="POST" action="cadastrarProduto" th:object="${produto}">
+                            <input type="hidden" readonly th:field="*{idProduto}" name="idProduto" id="idProduto" placeholder="ID do Produto">
+                            <label for="nomeProduto">Nome: </label>
+                            <input required type="text" th:field="*{nomeProduto}" name="nomeProduto" id="nomeProduto" placeholder="Nome do Produto">
+                            <label for="enderecoImagem">Endereço da imagem: </label>
+                            <input type="text" th:field="*{enderecoImagem}" name="enderecoImagem" id="enderecoImagem">
+                            <label for="precoProduto">Preço: </label>
+                            <input required type="number"  step="0.01" th:field="*{precoProduto}" name="precoProduto" id="precoProduto" placeholder="Preço do Produto">
+                            <label for="descricaoProduto">Descrição: </label>
+                            <textarea th:field="*{descricaoProduto}" name="descricaoProduto" id="descricaoProduto" cols="30" rows="10"
+                                placeholder="Descrição do Produto"></textarea>
+                            <label for="linkProduto">Link: </label>
+                            <input required type="text" th:field="*{linkProduto}" name="linkProduto" id="linkProduto" placeholder="Link do Produto">
+                            <input type="submit" value="Cadastrar">
+                        </form>
+                    </div>
+                    <div class="imgForm">
+                        <img src="img/perfume.jpg" alt="perfume">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+</body>
+
+</html>
