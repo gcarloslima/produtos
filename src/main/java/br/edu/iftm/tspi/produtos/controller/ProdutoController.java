@@ -41,10 +41,8 @@ public class ProdutoController {
         Produto produtoDb = dao.getProduto(produto.getIdProduto());
         if (produtoDb != null) {
             dao.alterarProduto(produto);
-            System.out.println("alo galera de peão");
         } else {
             dao.inserirProduto(produto);
-            System.out.println("alo galera de cawboi");
         }
         return "redirect:/listaProdutos";
     }
